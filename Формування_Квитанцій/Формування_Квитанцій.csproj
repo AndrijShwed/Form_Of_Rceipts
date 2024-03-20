@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PackageIcon>1889186_bank check_check_pen_icon.png</PackageIcon>
+    <Win32Resource></Win32Resource>
+    <ApplicationManifest></ApplicationManifest>
+    <ApplicationIcon>shoppaymentorderbuy-15_icon-icons.com_73880.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="shoppaymentorderbuy-15_icon-icons.com_73880.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspose.Words" Version="24.3.0" />
+    <PackageReference Include="AWSSDK.CloudFormation" Version="3.7.304.5" />
+    <PackageReference Include="DocX" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Office.Interop.Word" Version="15.0.4797.1004" />
+    <PackageReference Include="NPOI" Version="2.6.2" />
+    <PackageReference Include="OfficeOpenXml.Core.ExcelPackage" Version="1.0.0" />
+    <PackageReference Include="OfficeOpenXml.Extension.AspNetCore" Version="1.0.0" />
+    <PackageReference Include="Xceed.Document.NET" Version="2.0.21359.11160" />
+  </ItemGroup>
+
+</Project>
