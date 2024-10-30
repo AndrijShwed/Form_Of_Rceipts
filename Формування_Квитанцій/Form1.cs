@@ -81,6 +81,7 @@ namespace Формування_Квитанцій
             Dictionary<string, string> replacements = new Dictionary<string, string>();
             string nameNewFile = textBoxНазваНовогоФайлу.Text.ToString();
             string statFile = textBoxФайлШаблон.Text.ToString();
+            string date = textBoxДата.Text.ToString();
 
             using (DocX mergedDoc = DocX.Create(@"D:\Податки\" + nameNewFile + ".docx"))
             {
@@ -90,6 +91,7 @@ namespace Формування_Квитанцій
                     DocX document = DocX.Load(statFile);
                     replacements.Add("ПІП", peoples[i].PIP);
                     replacements.Add("Сума", peoples[i].sum.ToString());
+                    replacements.Add("Дата", date);
 
                     foreach (var replacement in replacements)
                     {

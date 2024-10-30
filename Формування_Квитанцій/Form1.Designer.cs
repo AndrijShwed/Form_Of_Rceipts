@@ -43,6 +43,8 @@
             label6 = new Label();
             textBoxФайлШаблон = new TextBox();
             buttonВибратиФайлШаблон = new Button();
+            label7 = new Label();
+            textBoxДата = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -60,7 +62,7 @@
             // textBoxНомер_колонки_ПІП
             // 
             textBoxНомер_колонки_ПІП.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBoxНомер_колонки_ПІП.Location = new Point(479, 153);
+            textBoxНомер_колонки_ПІП.Location = new Point(547, 144);
             textBoxНомер_колонки_ПІП.Name = "textBoxНомер_колонки_ПІП";
             textBoxНомер_колонки_ПІП.Size = new Size(125, 34);
             textBoxНомер_колонки_ПІП.TabIndex = 2;
@@ -71,7 +73,7 @@
             label3.BackColor = Color.LightCoral;
             label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new Point(12, 214);
+            label3.Location = new Point(12, 201);
             label3.Name = "label3";
             label3.Size = new Size(404, 28);
             label3.TabIndex = 3;
@@ -80,7 +82,7 @@
             // textBoxСума_Податку
             // 
             textBoxСума_Податку.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBoxСума_Податку.Location = new Point(479, 208);
+            textBoxСума_Податку.Location = new Point(547, 195);
             textBoxСума_Податку.Name = "textBoxСума_Податку";
             textBoxСума_Податку.Size = new Size(125, 34);
             textBoxСума_Податку.TabIndex = 4;
@@ -90,9 +92,9 @@
             Квитанції.BackColor = Color.DarkRed;
             Квитанції.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             Квитанції.ForeColor = SystemColors.ButtonHighlight;
-            Квитанції.Location = new Point(243, 343);
+            Квитанції.Location = new Point(230, 376);
             Квитанції.Name = "Квитанції";
-            Квитанції.Size = new Size(186, 68);
+            Квитанції.Size = new Size(186, 54);
             Квитанції.TabIndex = 5;
             Квитанції.Text = "Виконати";
             Квитанції.UseVisualStyleBackColor = false;
@@ -105,7 +107,7 @@
             label2.BackColor = Color.LightCoral;
             label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(12, 159);
+            label2.Location = new Point(12, 150);
             label2.Name = "label2";
             label2.Size = new Size(295, 28);
             label2.TabIndex = 1;
@@ -128,7 +130,7 @@
             textBoxНазва_Файла.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             textBoxНазва_Файла.Location = new Point(329, 95);
             textBoxНазва_Файла.Name = "textBoxНазва_Файла";
-            textBoxНазва_Файла.Size = new Size(275, 34);
+            textBoxНазва_Файла.Size = new Size(343, 34);
             textBoxНазва_Файла.TabIndex = 1;
             // 
             // ВибратиШлхДоФайлу
@@ -136,7 +138,7 @@
             ВибратиШлхДоФайлу.BackColor = Color.DarkRed;
             ВибратиШлхДоФайлу.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             ВибратиШлхДоФайлу.ForeColor = SystemColors.ButtonHighlight;
-            ВибратиШлхДоФайлу.Location = new Point(619, 94);
+            ВибратиШлхДоФайлу.Location = new Point(678, 95);
             ВибратиШлхДоФайлу.Name = "ВибратиШлхДоФайлу";
             ВибратиШлхДоФайлу.Size = new Size(110, 36);
             ВибратиШлхДоФайлу.TabIndex = 11;
@@ -150,7 +152,7 @@
             label5.BackColor = Color.LightCoral;
             label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = SystemColors.ButtonHighlight;
-            label5.Location = new Point(12, 270);
+            label5.Location = new Point(12, 251);
             label5.Name = "label5";
             label5.Size = new Size(266, 28);
             label5.TabIndex = 12;
@@ -159,7 +161,7 @@
             // textBoxНазваНовогоФайлу
             // 
             textBoxНазваНовогоФайлу.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBoxНазваНовогоФайлу.Location = new Point(329, 264);
+            textBoxНазваНовогоФайлу.Location = new Point(397, 245);
             textBoxНазваНовогоФайлу.Name = "textBoxНазваНовогоФайлу";
             textBoxНазваНовогоФайлу.Size = new Size(275, 34);
             textBoxНазваНовогоФайлу.TabIndex = 13;
@@ -194,7 +196,7 @@
             textBoxФайлШаблон.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             textBoxФайлШаблон.Location = new Point(329, 48);
             textBoxФайлШаблон.Name = "textBoxФайлШаблон";
-            textBoxФайлШаблон.Size = new Size(275, 34);
+            textBoxФайлШаблон.Size = new Size(343, 34);
             textBoxФайлШаблон.TabIndex = 1;
             // 
             // buttonВибратиФайлШаблон
@@ -202,7 +204,7 @@
             buttonВибратиФайлШаблон.BackColor = Color.DarkRed;
             buttonВибратиФайлШаблон.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             buttonВибратиФайлШаблон.ForeColor = SystemColors.ButtonHighlight;
-            buttonВибратиФайлШаблон.Location = new Point(619, 47);
+            buttonВибратиФайлШаблон.Location = new Point(678, 47);
             buttonВибратиФайлШаблон.Name = "buttonВибратиФайлШаблон";
             buttonВибратиФайлШаблон.Size = new Size(110, 36);
             buttonВибратиФайлШаблон.TabIndex = 17;
@@ -210,12 +212,34 @@
             buttonВибратиФайлШаблон.UseVisualStyleBackColor = false;
             buttonВибратиФайлШаблон.Click += buttonВибратиФайлШаблон_Click;
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.LightCoral;
+            label7.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = SystemColors.ButtonHighlight;
+            label7.Location = new Point(12, 300);
+            label7.Name = "label7";
+            label7.Size = new Size(130, 28);
+            label7.TabIndex = 18;
+            label7.Text = "Введіть дату";
+            // 
+            // textBoxДата
+            // 
+            textBoxДата.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            textBoxДата.Location = new Point(397, 294);
+            textBoxДата.Name = "textBoxДата";
+            textBoxДата.Size = new Size(275, 34);
+            textBoxДата.TabIndex = 19;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSalmon;
             ClientSize = new Size(800, 450);
+            Controls.Add(textBoxДата);
+            Controls.Add(label7);
             Controls.Add(buttonВибратиФайлШаблон);
             Controls.Add(textBoxФайлШаблон);
             Controls.Add(label6);
@@ -254,5 +278,7 @@
         private Label label6;
         private TextBox textBoxФайлШаблон;
         private Button buttonВибратиФайлШаблон;
+        private Label label7;
+        private TextBox textBoxДата;
     }
 }
