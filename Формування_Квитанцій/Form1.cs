@@ -83,7 +83,7 @@ namespace Формування_Квитанцій
             string statFile = textBoxФайлШаблон.Text.ToString();
             string date = textBoxДата.Text.ToString();
 
-            using (DocX mergedDoc = DocX.Create(@"D:\Податки\" + nameNewFile + ".docx"))
+            using (DocX mergedDoc = DocX.Create(@"C:\Папка диску D\Податки\" + nameNewFile + ".docx"))
             {
 
                 for (int i = 0; i < peoples.Count; i++)
