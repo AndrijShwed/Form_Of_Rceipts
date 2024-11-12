@@ -10,12 +10,14 @@ namespace Формування_Квитанцій
     {
         public string PIP;
         public double sum;
+        public string Count;
         
 
-        public People(string _PIP, double _sum)
+        public People(string _PIP, double _sum, string _Count)
         {
             PIP = _PIP;
             sum = _sum;
+            Count = _Count;
         }
 
     }

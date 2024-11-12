@@ -42,6 +42,8 @@
             Довідка = new Label();
             label7 = new Label();
             textBoxДата = new TextBox();
+            label6 = new Label();
+            textBoxРахунок = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -59,7 +61,7 @@
             // textBoxНомер_колонки_ПІП
             // 
             textBoxНомер_колонки_ПІП.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBoxНомер_колонки_ПІП.Location = new Point(547, 144);
+            textBoxНомер_колонки_ПІП.Location = new Point(547, 103);
             textBoxНомер_колонки_ПІП.Name = "textBoxНомер_колонки_ПІП";
             textBoxНомер_колонки_ПІП.Size = new Size(125, 34);
             textBoxНомер_колонки_ПІП.TabIndex = 2;
@@ -104,7 +106,7 @@
             label2.BackColor = Color.LightCoral;
             label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(12, 150);
+            label2.Location = new Point(12, 106);
             label2.Name = "label2";
             label2.Size = new Size(295, 28);
             label2.TabIndex = 1;
@@ -116,7 +118,7 @@
             label4.BackColor = Color.LightCoral;
             label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = SystemColors.ButtonHighlight;
-            label4.Location = new Point(12, 101);
+            label4.Location = new Point(12, 52);
             label4.Name = "label4";
             label4.Size = new Size(236, 28);
             label4.TabIndex = 6;
@@ -125,7 +127,7 @@
             // textBoxНазва_Файла
             // 
             textBoxНазва_Файла.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBoxНазва_Файла.Location = new Point(329, 95);
+            textBoxНазва_Файла.Location = new Point(329, 52);
             textBoxНазва_Файла.Name = "textBoxНазва_Файла";
             textBoxНазва_Файла.Size = new Size(343, 34);
             textBoxНазва_Файла.TabIndex = 1;
@@ -135,7 +137,7 @@
             ВибратиШлхДоФайлу.BackColor = Color.DarkRed;
             ВибратиШлхДоФайлу.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             ВибратиШлхДоФайлу.ForeColor = SystemColors.ButtonHighlight;
-            ВибратиШлхДоФайлу.Location = new Point(678, 95);
+            ВибратиШлхДоФайлу.Location = new Point(678, 50);
             ВибратиШлхДоФайлу.Name = "ВибратиШлхДоФайлу";
             ВибратиШлхДоФайлу.Size = new Size(110, 36);
             ВибратиШлхДоФайлу.TabIndex = 11;
@@ -196,12 +198,34 @@
             textBoxДата.Size = new Size(275, 34);
             textBoxДата.TabIndex = 19;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.LightCoral;
+            label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.ButtonHighlight;
+            label6.Location = new Point(12, 152);
+            label6.Name = "label6";
+            label6.Size = new Size(351, 28);
+            label6.TabIndex = 20;
+            label6.Text = "Введіть номер колонки з рахунком";
+            // 
+            // textBoxРахунок
+            // 
+            textBoxРахунок.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            textBoxРахунок.Location = new Point(547, 152);
+            textBoxРахунок.Name = "textBoxРахунок";
+            textBoxРахунок.Size = new Size(125, 34);
+            textBoxРахунок.TabIndex = 21;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSalmon;
             ClientSize = new Size(800, 450);
+            Controls.Add(textBoxРахунок);
+            Controls.Add(label6);
             Controls.Add(textBoxДата);
             Controls.Add(label7);
             Controls.Add(Довідка);
@@ -238,5 +262,7 @@
         private Label Довідка;
         private Label label7;
         private TextBox textBoxДата;
+        private Label label6;
+        private TextBox textBoxРахунок;
     }
 }

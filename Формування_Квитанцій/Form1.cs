@@ -21,11 +21,13 @@ namespace Формування_Квитанцій
 
         int col_PIP = 0;
         int col_Sum = 0;
+        int col_Count = 0;
 
         private void Квитанції_Click(object sender, EventArgs e)
         {
             Квитанції.BackColor = Color.Blue;
-            if (textBoxНазва_Файла.Text != "" && textBoxНомер_колонки_ПІП.Text != "" && textBoxСума_Податку.Text != "")
+            if (textBoxНазва_Файла.Text != "" && textBoxНомер_колонки_ПІП.Text != "" && 
+                textBoxСума_Податку.Text != "" && textBoxРахунок.Text != "")
             {
                 if (int.TryParse(textBoxНомер_колонки_ПІП.Text, out col_PIP))
                 { }
@@ -35,6 +37,13 @@ namespace Формування_Квитанцій
                     return;
                 }
                 if (int.TryParse(textBoxСума_Податку.Text, out col_Sum))
+                { }
+                else
+                {
+                    MessageBox.Show("Некоректне значення поля номер колонки суми податку");
+                    return;
+                }
+                if (int.TryParse(textBoxРахунок.Text, out col_Count))
                 { }
                 else
                 {
@@ -68,7 +77,8 @@ namespace Формування_Квитанцій
                     {
 
                         peoples.Add(new People(worksheet.Cells[row, col_PIP].Value.ToString(),
-                        Convert.ToDouble(worksheet.Cells[row, col_Sum].Value)));
+                        Convert.ToDouble(worksheet.Cells[row, col_Sum].Value),
+                        worksheet.Cells[row, col_Count].Value.ToString()));
 
                     }
                 }
@@ -103,6 +113,7 @@ namespace Формування_Квитанцій
                     replacements.Add("ПІП", peoples[i].PIP);
                     replacements.Add("Сума", peoples[i].sum.ToString());
                     replacements.Add("Дата", date);
+                    replacements.Add("Рахунок", peoples[i].Count);
 
                     foreach (var replacement in replacements)
                     {
