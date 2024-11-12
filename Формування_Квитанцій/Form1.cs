@@ -67,7 +67,7 @@ namespace Формування_Квитанцій
                     {
 
                         peoples.Add(new People(worksheet.Cells[row, col_PIP].Value.ToString(),
-                                               Convert.ToDouble(worksheet.Cells[row, col_Sum].Value)));
+                        Convert.ToDouble(worksheet.Cells[row, col_Sum].Value)));
 
                     }
                 }
