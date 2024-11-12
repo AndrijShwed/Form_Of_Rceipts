@@ -1,15 +1,6 @@
 using OfficeOpenXml;
 using System.Diagnostics;
 using Xceed.Words.NET;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Windows.Forms;
-using Xceed.Words.NET;
-using Word = Microsoft.Office.Interop.Word;
 
 namespace Формування_Квитанцій
 {
