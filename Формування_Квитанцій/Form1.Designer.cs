@@ -199,19 +199,6 @@
             textBoxФайлШаблон.Size = new Size(343, 34);
             textBoxФайлШаблон.TabIndex = 1;
             // 
-            // buttonВибратиФайлШаблон
-            // 
-            buttonВибратиФайлШаблон.BackColor = Color.DarkRed;
-            buttonВибратиФайлШаблон.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonВибратиФайлШаблон.ForeColor = SystemColors.ButtonHighlight;
-            buttonВибратиФайлШаблон.Location = new Point(678, 47);
-            buttonВибратиФайлШаблон.Name = "buttonВибратиФайлШаблон";
-            buttonВибратиФайлШаблон.Size = new Size(110, 36);
-            buttonВибратиФайлШаблон.TabIndex = 17;
-            buttonВибратиФайлШаблон.Text = "Вибрати";
-            buttonВибратиФайлШаблон.UseVisualStyleBackColor = false;
-            buttonВибратиФайлШаблон.Click += buttonВибратиФайлШаблон_Click;
-            // 
             // label7
             // 
             label7.AutoSize = true;
