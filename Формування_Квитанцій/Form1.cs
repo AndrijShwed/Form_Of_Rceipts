@@ -1,5 +1,15 @@
 using OfficeOpenXml;
+using System.Diagnostics;
 using Xceed.Words.NET;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Windows.Forms;
+using Xceed.Words.NET;
+using Word = Microsoft.Office.Interop.Word;
 
 namespace Формування_Квитанцій
 {
@@ -80,15 +90,25 @@ namespace Формування_Квитанцій
             // Заміна слова у всьому документі
             Dictionary<string, string> replacements = new Dictionary<string, string>();
             string nameNewFile = textBoxНазваНовогоФайлу.Text.ToString();
-            string statFile = textBoxФайлШаблон.Text.ToString();
+            //string statFile = textBoxФайлШаблон.Text.ToString();
             string date = textBoxДата.Text.ToString();
 
-            using (DocX mergedDoc = DocX.Create(@"C:\Папка диску D\Податки\" + nameNewFile + ".docx"))
+            // Визначення шляху до тимчасової папки
+            string tempFolderPath = @"C:\Податки";
+            string tempFilePath = Path.Combine(tempFolderPath, nameNewFile + ".docx");
+
+            // Створення папки, якщо її немає
+            if (!Directory.Exists(tempFolderPath))
+            {
+                Directory.CreateDirectory(tempFolderPath);
+            }
+
+            using (DocX mergedDoc = DocX.Create(tempFilePath))
             {
 
                 for (int i = 0; i < peoples.Count; i++)
                 {
-                    DocX document = DocX.Load(statFile);
+                    DocX document = DocX.Load(@"DocTemplates\Шаблон.docx");
                     replacements.Add("ПІП", peoples[i].PIP);
                     replacements.Add("Сума", peoples[i].sum.ToString());
                     replacements.Add("Дата", date);
@@ -99,20 +119,25 @@ namespace Формування_Квитанцій
                     }
                     foreach (var paragraph in document.Paragraphs)
                     {
-                        mergedDoc.InsertParagraph(paragraph);
+                       mergedDoc.InsertParagraph(paragraph);
                     }
-
 
                     replacements.Clear();
                 }
                 mergedDoc.MarginRight = 40;
                 mergedDoc.MarginTop = 20;
                 mergedDoc.Save();
+
+                // Відкриваємо документ в Word для перегляду
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = tempFilePath,
+                    UseShellExecute = true
+                });
+
             }
 
-
-            MessageBox.Show("Квитанції готові. Файл збережено на диску 'D' у папку 'Податки' !!!");
-
+            MessageBox.Show("Файл " + nameNewFile + " збережено на диску С в папці - Податки");
         }
 
         private void ВибратиШлхДоФайлу_Click(object sender, EventArgs e)
@@ -139,20 +164,5 @@ namespace Формування_Квитанцій
                 " на відповідні значення з вказаної вами таблиці .xlsx");
         }
 
-        private void buttonВибратиФайлШаблон_Click(object sender, EventArgs e)
-        {
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
-            {
-                openFileDialog.Filter = "Word Files|*.docx";
-                openFileDialog.FilterIndex = 1;
-                openFileDialog.RestoreDirectory = true;
-
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    // Встановлюємо шлях до обраного файлу в текстове поле
-                    textBoxФайлШаблон.Text = openFileDialog.FileName;
-                }
-            }
-        }
     }
 }

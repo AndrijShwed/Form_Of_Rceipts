@@ -40,9 +40,6 @@
             label5 = new Label();
             textBoxНазваНовогоФайлу = new TextBox();
             Довідка = new Label();
-            label6 = new Label();
-            textBoxФайлШаблон = new TextBox();
-            buttonВибратиФайлШаблон = new Button();
             label7 = new Label();
             textBoxДата = new TextBox();
             SuspendLayout();
@@ -179,26 +176,6 @@
             Довідка.Text = "Довідкова інформація";
             Довідка.MouseHover += Довідка_MouseHover;
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.LightCoral;
-            label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = SystemColors.ButtonHighlight;
-            label6.Location = new Point(12, 54);
-            label6.Name = "label6";
-            label6.Size = new Size(232, 28);
-            label6.TabIndex = 15;
-            label6.Text = "Виберіть файл-шаблон";
-            // 
-            // textBoxФайлШаблон
-            // 
-            textBoxФайлШаблон.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBoxФайлШаблон.Location = new Point(329, 48);
-            textBoxФайлШаблон.Name = "textBoxФайлШаблон";
-            textBoxФайлШаблон.Size = new Size(343, 34);
-            textBoxФайлШаблон.TabIndex = 1;
-            // 
             // label7
             // 
             label7.AutoSize = true;
@@ -227,9 +204,6 @@
             ClientSize = new Size(800, 450);
             Controls.Add(textBoxДата);
             Controls.Add(label7);
-            Controls.Add(buttonВибратиФайлШаблон);
-            Controls.Add(textBoxФайлШаблон);
-            Controls.Add(label6);
             Controls.Add(Довідка);
             Controls.Add(textBoxНазваНовогоФайлу);
             Controls.Add(label5);
@@ -262,9 +236,6 @@
         private Label label5;
         private TextBox textBoxНазваНовогоФайлу;
         private Label Довідка;
-        private Label label6;
-        private TextBox textBoxФайлШаблон;
-        private Button buttonВибратиФайлШаблон;
         private Label label7;
         private TextBox textBoxДата;
     }
