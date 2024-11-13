@@ -42,8 +42,6 @@
             Довідка = new Label();
             label7 = new Label();
             textBoxДата = new TextBox();
-            label6 = new Label();
-            textBoxРахунок = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -198,34 +196,12 @@
             textBoxДата.Size = new Size(275, 34);
             textBoxДата.TabIndex = 19;
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.LightCoral;
-            label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = SystemColors.ButtonHighlight;
-            label6.Location = new Point(12, 152);
-            label6.Name = "label6";
-            label6.Size = new Size(351, 28);
-            label6.TabIndex = 20;
-            label6.Text = "Введіть номер колонки з рахунком";
-            // 
-            // textBoxРахунок
-            // 
-            textBoxРахунок.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBoxРахунок.Location = new Point(547, 152);
-            textBoxРахунок.Name = "textBoxРахунок";
-            textBoxРахунок.Size = new Size(125, 34);
-            textBoxРахунок.TabIndex = 21;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSalmon;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBoxРахунок);
-            Controls.Add(label6);
             Controls.Add(textBoxДата);
             Controls.Add(label7);
             Controls.Add(Довідка);
@@ -247,7 +223,6 @@
         }
 
         #endregion
-
         private Label label1;
         private TextBox textBoxНомер_колонки_ПІП;
         private Label label3;
@@ -262,7 +237,5 @@
         private Label Довідка;
         private Label label7;
         private TextBox textBoxДата;
-        private Label label6;
-        private TextBox textBoxРахунок;
     }
 }

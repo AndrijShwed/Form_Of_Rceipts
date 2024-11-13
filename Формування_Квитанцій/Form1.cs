@@ -21,7 +21,6 @@ namespace Формування_Квитанцій
 
         int col_PIP = 0;
         int col_Sum = 0;
-        int col_Count = 0;
 
         private void Квитанції_Click(object sender, EventArgs e)
         {
@@ -43,14 +42,6 @@ namespace Формування_Квитанцій
                     MessageBox.Show("Некоректне значення поля номер колонки суми податку");
                     return;
                 }
-                if (int.TryParse(textBoxРахунок.Text, out col_Count))
-                { }
-                else
-                {
-                    MessageBox.Show("Некоректне значення поля номер колонки суми податку");
-                    return;
-                }
-
             }
             else
             {
@@ -113,7 +104,6 @@ namespace Формування_Квитанцій
                     replacements.Add("ПІП", peoples[i].PIP);
                     replacements.Add("Сума", peoples[i].sum.ToString());
                     replacements.Add("Дата", date);
-                    replacements.Add("Рахунок", peoples[i].Count);
 
                     foreach (var replacement in replacements)
                     {
