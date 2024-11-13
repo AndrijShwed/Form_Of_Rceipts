@@ -26,7 +26,7 @@ namespace Формування_Квитанцій
         {
             Квитанції.BackColor = Color.Blue;
             if (textBoxНазва_Файла.Text != "" && textBoxНомер_колонки_ПІП.Text != "" && 
-                textBoxСума_Податку.Text != "" && textBoxРахунок.Text != "")
+                textBoxСума_Податку.Text != "")
             {
                 if (int.TryParse(textBoxНомер_колонки_ПІП.Text, out col_PIP))
                 { }
@@ -68,8 +68,7 @@ namespace Формування_Квитанцій
                     {
 
                         peoples.Add(new People(worksheet.Cells[row, col_PIP].Value.ToString(),
-                        Convert.ToDouble(worksheet.Cells[row, col_Sum].Value),
-                        worksheet.Cells[row, col_Count].Value.ToString()));
+                        Convert.ToDouble(worksheet.Cells[row, col_Sum].Value)));
 
                     }
                 }

@@ -70,7 +70,7 @@
             label3.BackColor = Color.LightCoral;
             label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new Point(12, 201);
+            label3.Location = new Point(12, 165);
             label3.Name = "label3";
             label3.Size = new Size(404, 28);
             label3.TabIndex = 3;
@@ -79,7 +79,7 @@
             // textBoxСума_Податку
             // 
             textBoxСума_Податку.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBoxСума_Податку.Location = new Point(547, 195);
+            textBoxСума_Податку.Location = new Point(547, 162);
             textBoxСума_Податку.Name = "textBoxСума_Податку";
             textBoxСума_Податку.Size = new Size(125, 34);
             textBoxСума_Податку.TabIndex = 4;
