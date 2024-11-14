@@ -222,6 +222,7 @@
             PerformLayout();
         }
 
+
         #endregion
         private Label label1;
         private TextBox textBoxНомер_колонки_ПІП;
