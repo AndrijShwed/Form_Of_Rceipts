@@ -14,11 +14,19 @@
 
   <ItemGroup>
     <None Remove="DocTemplates\Шаблон.docx" />
+    <None Remove="DocTemplates\Шаблон_Житлова_Нерухомість.docx" />
+    <None Remove="DocTemplates\Шаблон_Нежитлова_Нерухомість.docx" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="DocTemplates\Шаблон.docx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DocTemplates\Шаблон_Житлова_Нерухомість.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DocTemplates\Шаблон_Нежитлова_Нерухомість.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="shoppaymentorderbuy-15_icon-icons.com_73880.ico" />
   </ItemGroup>

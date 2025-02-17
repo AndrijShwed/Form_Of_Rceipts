@@ -6,13 +6,34 @@ namespace Формування_Квитанцій
 {
     public partial class Form1 : Form
     {
+        private string folderPath;
+        private string fullPath;
         public Form1()
         {
             InitializeComponent();
             Квитанції.BackColor = Color.DarkRed;
             textBoxНазва_Файла.Focus();
+            string folderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DocTemplates");
+            string fullPath;
+            LoadFilesToComboBox();
 
         }
+
+        private void LoadFilesToComboBox()
+        {
+            string folderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DocTemplates");
+            if (Directory.Exists(folderPath))
+            {
+                string[] files = Directory.GetFiles(folderPath, "*.docx");
+                comboBoxШаблони.Items.AddRange(files.Select(Path.GetFileName).ToArray());
+            }
+            else
+            {
+                MessageBox.Show("Папка DocTemplates не знайдена", "Помилка");
+            }
+        }
+
+
 
         private void Квитанції_MouseClick(object sender, MouseEventArgs e)
         {
@@ -25,7 +46,7 @@ namespace Формування_Квитанцій
         private void Квитанції_Click(object sender, EventArgs e)
         {
             Квитанції.BackColor = Color.Blue;
-            if (textBoxНазва_Файла.Text != "" && textBoxНомер_колонки_ПІП.Text != "" && 
+            if (textBoxНазва_Файла.Text != "" && textBoxНомер_колонки_ПІП.Text != "" &&
                 textBoxСума_Податку.Text != "")
             {
                 if (int.TryParse(textBoxНомер_колонки_ПІП.Text, out col_PIP))
@@ -99,7 +120,8 @@ namespace Формування_Квитанцій
 
                 for (int i = 0; i < peoples.Count; i++)
                 {
-                    DocX document = DocX.Load(@"DocTemplates\Шаблон.docx");
+                   // DocX document = DocX.Load(@"DocTemplates\Шаблон.docx");
+                    DocX document = DocX.Load(fullPath);
                     replacements.Add("ПІП", peoples[i].PIP);
                     replacements.Add("Сума", peoples[i].sum.ToString());
                     replacements.Add("Дата", date);
@@ -110,7 +132,7 @@ namespace Формування_Квитанцій
                     }
                     foreach (var paragraph in document.Paragraphs)
                     {
-                       mergedDoc.InsertParagraph(paragraph);
+                        mergedDoc.InsertParagraph(paragraph);
                     }
 
                     replacements.Clear();
@@ -143,6 +165,7 @@ namespace Формування_Квитанцій
                 {
                     // Встановлюємо шлях до обраного файлу в текстове поле
                     textBoxНазва_Файла.Text = openFileDialog.FileName;
+                    textBoxНазва_Файла.BackColor = Color.LightCoral;
                 }
             }
         }
@@ -155,5 +178,16 @@ namespace Формування_Квитанцій
                 " на відповідні значення з вказаної вами таблиці .xlsx");
         }
 
+        private void buttonВибірШаблона_Click(object sender, EventArgs e)
+        {
+            string folderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DocTemplates");
+            if (comboBoxШаблони.SelectedItem != null)
+            {
+                string selectedFile = comboBoxШаблони.SelectedItem.ToString();
+                fullPath = Path.Combine(folderPath, selectedFile);
+                comboBoxШаблони.BackColor = Color.LightCoral;
+                
+            }
+        }
     }
 }
