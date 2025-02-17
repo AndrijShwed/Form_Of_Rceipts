@@ -64,7 +64,7 @@ namespace Формування_Квитанцій
                     int colCount = worksheet.Dimension.Columns; // Отримуємо кількість колонок
 
                     // Проходимо через кожну комірку та виводимо її значення
-                    for (int row = 2; row <= rowCount + 1; row++)
+                    for (int row = 2; row < rowCount + 1; row++)
                     {
 
                         peoples.Add(new People(worksheet.Cells[row, col_PIP].Value.ToString(),
