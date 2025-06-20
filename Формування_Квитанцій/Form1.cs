@@ -13,8 +13,6 @@ namespace Формування_Квитанцій
             InitializeComponent();
             Квитанції.BackColor = Color.DarkRed;
             textBoxНазва_Файла.Focus();
-            //string folderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DocTemplates");
-            string fullPath;
             LoadFilesToComboBox();
 
         }
@@ -131,7 +129,6 @@ namespace Формування_Квитанцій
                 {
                     for (int i = 0; i < peoples.Count; i++)
                     {
-                        // DocX document = DocX.Load(@"DocTemplates\Шаблон.docx");
                         DocX document = DocX.Load(folderPath);
                         replacements.Add("ПІП", peoples[i].PIP);
                         replacements.Add("Сума", peoples[i].sum.ToString());
