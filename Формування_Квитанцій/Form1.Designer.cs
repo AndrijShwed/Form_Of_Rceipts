@@ -154,9 +154,9 @@
             label5.ForeColor = SystemColors.ButtonHighlight;
             label5.Location = new Point(12, 318);
             label5.Name = "label5";
-            label5.Size = new Size(266, 28);
+            label5.Size = new Size(278, 28);
             label5.TabIndex = 12;
-            label5.Text = "Введіть назву нового фалу";
+            label5.Text = "Введіть назву нового файлу";
             // 
             // textBoxНазваНовогоФайлу
             // 
