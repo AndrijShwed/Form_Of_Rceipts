@@ -45,6 +45,10 @@
             label6 = new Label();
             buttonВибірШаблона = new Button();
             comboBoxШаблони = new ComboBox();
+            textBoxCount = new TextBox();
+            textBoxPayKod = new TextBox();
+            label8 = new Label();
+            label9 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -92,7 +96,7 @@
             Квитанції.BackColor = Color.DarkRed;
             Квитанції.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             Квитанції.ForeColor = SystemColors.ButtonHighlight;
-            Квитанції.Location = new Point(230, 438);
+            Квитанції.Location = new Point(218, 485);
             Квитанції.Name = "Квитанції";
             Квитанції.Size = new Size(186, 54);
             Квитанції.TabIndex = 5;
@@ -152,7 +156,7 @@
             label5.BackColor = Color.LightCoral;
             label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = SystemColors.ButtonHighlight;
-            label5.Location = new Point(12, 318);
+            label5.Location = new Point(12, 387);
             label5.Name = "label5";
             label5.Size = new Size(278, 28);
             label5.TabIndex = 12;
@@ -161,7 +165,7 @@
             // textBoxНазваНовогоФайлу
             // 
             textBoxНазваНовогоФайлу.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBoxНазваНовогоФайлу.Location = new Point(465, 312);
+            textBoxНазваНовогоФайлу.Location = new Point(465, 381);
             textBoxНазваНовогоФайлу.Name = "textBoxНазваНовогоФайлу";
             textBoxНазваНовогоФайлу.Size = new Size(275, 34);
             textBoxНазваНовогоФайлу.TabIndex = 13;
@@ -172,7 +176,7 @@
             Довідка.BackColor = Color.OrangeRed;
             Довідка.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             Довідка.ForeColor = SystemColors.ActiveCaptionText;
-            Довідка.Location = new Point(562, 464);
+            Довідка.Location = new Point(562, 499);
             Довідка.Name = "Довідка";
             Довідка.Size = new Size(226, 28);
             Довідка.TabIndex = 14;
@@ -185,7 +189,7 @@
             label7.BackColor = Color.LightCoral;
             label7.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label7.ForeColor = SystemColors.ButtonHighlight;
-            label7.Location = new Point(12, 372);
+            label7.Location = new Point(12, 436);
             label7.Name = "label7";
             label7.Size = new Size(130, 28);
             label7.TabIndex = 18;
@@ -194,7 +198,7 @@
             // textBoxДата
             // 
             textBoxДата.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBoxДата.Location = new Point(465, 366);
+            textBoxДата.Location = new Point(465, 433);
             textBoxДата.Name = "textBoxДата";
             textBoxДата.Size = new Size(275, 34);
             textBoxДата.TabIndex = 19;
@@ -233,12 +237,56 @@
             comboBoxШаблони.Size = new Size(385, 36);
             comboBoxШаблони.TabIndex = 23;
             // 
+            // textBoxCount
+            // 
+            textBoxCount.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            textBoxCount.Location = new Point(465, 289);
+            textBoxCount.Name = "textBoxCount";
+            textBoxCount.Size = new Size(275, 34);
+            textBoxCount.TabIndex = 24;
+            // 
+            // textBoxPayKod
+            // 
+            textBoxPayKod.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            textBoxPayKod.Location = new Point(465, 329);
+            textBoxPayKod.Name = "textBoxPayKod";
+            textBoxPayKod.Size = new Size(275, 34);
+            textBoxPayKod.TabIndex = 25;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.BackColor = Color.LightCoral;
+            label8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = SystemColors.ButtonHighlight;
+            label8.Location = new Point(12, 295);
+            label8.Name = "label8";
+            label8.Size = new Size(166, 28);
+            label8.TabIndex = 26;
+            label8.Text = "Введіть рахунок";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BackColor = Color.LightCoral;
+            label9.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.ForeColor = SystemColors.ButtonHighlight;
+            label9.Location = new Point(12, 335);
+            label9.Name = "label9";
+            label9.Size = new Size(209, 28);
+            label9.TabIndex = 27;
+            label9.Text = "Введіть код платежу";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSalmon;
-            ClientSize = new Size(890, 504);
+            ClientSize = new Size(890, 551);
+            Controls.Add(label9);
+            Controls.Add(label8);
+            Controls.Add(textBoxPayKod);
+            Controls.Add(textBoxCount);
             Controls.Add(comboBoxШаблони);
             Controls.Add(buttonВибірШаблона);
             Controls.Add(label6);
@@ -281,5 +329,9 @@
         private Label label6;
         private Button buttonВибірШаблона;
         private ComboBox comboBoxШаблони;
+        private TextBox textBoxCount;
+        private TextBox textBoxPayKod;
+        private Label label8;
+        private Label label9;
     }
 }

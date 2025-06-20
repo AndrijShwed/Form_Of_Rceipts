@@ -13,7 +13,7 @@ namespace Формування_Квитанцій
             InitializeComponent();
             Квитанції.BackColor = Color.DarkRed;
             textBoxНазва_Файла.Focus();
-            string folderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DocTemplates");
+            //string folderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DocTemplates");
             string fullPath;
             LoadFilesToComboBox();
 
@@ -104,6 +104,11 @@ namespace Формування_Квитанцій
             string nameNewFile = textBoxНазваНовогоФайлу.Text.ToString();
             //string statFile = textBoxФайлШаблон.Text.ToString();
             string date = textBoxДата.Text.ToString();
+            string count = textBoxCount.Text.ToString();
+            string payKod = textBoxPayKod.Text.ToString();
+            string шаблон = comboBoxШаблони.Text;
+            string folderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DocTemplates", шаблон);
+
 
             // Визначення шляху до тимчасової папки
             string tempFolderPath = @"C:\Податки";
@@ -117,37 +122,46 @@ namespace Формування_Квитанцій
 
             using (DocX mergedDoc = DocX.Create(tempFilePath))
             {
-
-                for (int i = 0; i < peoples.Count; i++)
+                if (date == "" || count == "" || payKod == "")
                 {
-                   // DocX document = DocX.Load(@"DocTemplates\Шаблон.docx");
-                    DocX document = DocX.Load(fullPath);
-                    replacements.Add("ПІП", peoples[i].PIP);
-                    replacements.Add("Сума", peoples[i].sum.ToString());
-                    replacements.Add("Дата", date);
-
-                    foreach (var replacement in replacements)
-                    {
-                        document.ReplaceText(replacement.Key, replacement.Value, false);
-                    }
-                    foreach (var paragraph in document.Paragraphs)
-                    {
-                        mergedDoc.InsertParagraph(paragraph);
-                    }
-
-                    replacements.Clear();
+                    MessageBox.Show("Не заповнео дату або рахунок або код платежу");
+                    return;
                 }
-                mergedDoc.MarginRight = 40;
-                mergedDoc.MarginTop = 20;
-                mergedDoc.Save();
-
-                // Відкриваємо документ в Word для перегляду
-                Process.Start(new ProcessStartInfo
+                else
                 {
-                    FileName = tempFilePath,
-                    UseShellExecute = true
-                });
+                    for (int i = 0; i < peoples.Count; i++)
+                    {
+                        // DocX document = DocX.Load(@"DocTemplates\Шаблон.docx");
+                        DocX document = DocX.Load(folderPath);
+                        replacements.Add("ПІП", peoples[i].PIP);
+                        replacements.Add("Сума", peoples[i].sum.ToString());
+                        replacements.Add("Дата", date);
+                        replacements.Add("COUNT", count);
+                        replacements.Add("кодПлатежу", payKod);
 
+
+                        foreach (var replacement in replacements)
+                        {
+                            document.ReplaceText(replacement.Key, replacement.Value, false);
+                        }
+                        foreach (var paragraph in document.Paragraphs)
+                        {
+                            mergedDoc.InsertParagraph(paragraph);
+                        }
+
+                        replacements.Clear();
+                    }
+                    mergedDoc.MarginRight = 40;
+                    mergedDoc.MarginTop = 20;
+                    mergedDoc.Save();
+
+                    // Відкриваємо документ в Word для перегляду
+                    Process.Start(new ProcessStartInfo
+                    {
+                        FileName = tempFilePath,
+                        UseShellExecute = true
+                    });
+                }
             }
 
             MessageBox.Show("Файл " + nameNewFile + " збережено на диску С в папці - Податки");
