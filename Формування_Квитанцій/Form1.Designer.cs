@@ -240,17 +240,17 @@
             // textBoxCount
             // 
             textBoxCount.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBoxCount.Location = new Point(465, 289);
+            textBoxCount.Location = new Point(615, 289);
             textBoxCount.Name = "textBoxCount";
-            textBoxCount.Size = new Size(275, 34);
+            textBoxCount.Size = new Size(125, 34);
             textBoxCount.TabIndex = 24;
             // 
             // textBoxPayKod
             // 
             textBoxPayKod.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBoxPayKod.Location = new Point(465, 329);
+            textBoxPayKod.Location = new Point(615, 329);
             textBoxPayKod.Name = "textBoxPayKod";
-            textBoxPayKod.Size = new Size(275, 34);
+            textBoxPayKod.Size = new Size(125, 34);
             textBoxPayKod.TabIndex = 25;
             // 
             // label8
@@ -261,9 +261,9 @@
             label8.ForeColor = SystemColors.ButtonHighlight;
             label8.Location = new Point(12, 295);
             label8.Name = "label8";
-            label8.Size = new Size(166, 28);
+            label8.Size = new Size(351, 28);
             label8.TabIndex = 26;
-            label8.Text = "Введіть рахунок";
+            label8.Text = "Введіть номер колонки з рахунком";
             // 
             // label9
             // 
@@ -273,9 +273,9 @@
             label9.ForeColor = SystemColors.ButtonHighlight;
             label9.Location = new Point(12, 335);
             label9.Name = "label9";
-            label9.Size = new Size(209, 28);
+            label9.Size = new Size(406, 28);
             label9.TabIndex = 27;
-            label9.Text = "Введіть код платежу";
+            label9.Text = "Введіть номер колонки з кодом платежу";
             // 
             // Form1
             // 
