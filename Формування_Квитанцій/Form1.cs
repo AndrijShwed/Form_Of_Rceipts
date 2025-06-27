@@ -99,7 +99,7 @@ namespace Формування_Квитанцій
                     int colCount = worksheet.Dimension.Columns; // Отримуємо кількість колонок
 
                     // Проходимо через кожну комірку та виводимо її значення
-                    for (int row = 2; row < rowCount + 1; row++)
+                    for (int row = 2; row < rowCount + 2; row++)
                     {
 
                         peoples.Add(new People(worksheet.Cells[row, col_PIP].Value.ToString(),
@@ -198,16 +198,52 @@ namespace Формування_Квитанцій
                     textBoxНазва_Файла.BackColor = Color.LightCoral;
                 }
             }
+
+            textBoxНомер_колонки_ПІП.Focus();
         }
-        private void buttonВибірШаблона_Click(object sender, EventArgs e)
+
+        private void textBoxНомер_колонки_ПІП_KeyDown(object sender, KeyEventArgs e)
         {
-            string folderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DocTemplates");
-            if (comboBoxШаблони.SelectedItem != null)
+            if (e.KeyCode == Keys.Enter)
             {
-                string selectedFile = comboBoxШаблони.SelectedItem.ToString();
-                fullPath = Path.Combine(folderPath, selectedFile);
-                comboBoxШаблони.BackColor = Color.LightCoral;
-                
+                e.SuppressKeyPress = true;
+                textBoxPayKod.Focus();
+            }
+        }
+
+        private void textBoxPayKod_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                textBoxСума_Податку.Focus();
+            }
+        }
+
+        private void textBoxСума_Податку_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                textBoxCount.Focus();
+            }
+        }
+
+        private void textBoxCount_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                textBoxНазваНовогоФайлу.Focus();
+            }
+        }
+
+        private void textBoxНазваНовогоФайлу_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                textBoxДата.Focus();
             }
         }
     }
