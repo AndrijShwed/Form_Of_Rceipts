@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             textBoxНомер_колонки_ПІП = new TextBox();
             label3 = new Label();
             textBoxСума_Податку = new TextBox();
@@ -43,25 +42,12 @@
             label7 = new Label();
             textBoxДата = new TextBox();
             label6 = new Label();
-            buttonВибірШаблона = new Button();
             comboBoxШаблони = new ComboBox();
             textBoxCount = new TextBox();
             textBoxPayKod = new TextBox();
             label8 = new Label();
             label9 = new Label();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Firebrick;
-            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(12, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(776, 28);
-            label1.TabIndex = 0;
-            label1.Text = "Опрацьовуваний файл Excel має бути поміщений на дису \"D\" в папці \"Податки\"";
             // 
             // textBoxНомер_колонки_ПІП
             // 
@@ -170,19 +156,6 @@
             textBoxНазваНовогоФайлу.Size = new Size(275, 34);
             textBoxНазваНовогоФайлу.TabIndex = 13;
             // 
-            // Довідка
-            // 
-            Довідка.AutoSize = true;
-            Довідка.BackColor = Color.OrangeRed;
-            Довідка.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            Довідка.ForeColor = SystemColors.ActiveCaptionText;
-            Довідка.Location = new Point(562, 499);
-            Довідка.Name = "Довідка";
-            Довідка.Size = new Size(226, 28);
-            Довідка.TabIndex = 14;
-            Довідка.Text = "Довідкова інформація";
-            Довідка.MouseHover += Довідка_MouseHover;
-            // 
             // label7
             // 
             label7.AutoSize = true;
@@ -214,19 +187,6 @@
             label6.Size = new Size(298, 28);
             label6.TabIndex = 20;
             label6.Text = "Виберіть відповідний шаблон";
-            // 
-            // buttonВибірШаблона
-            // 
-            buttonВибірШаблона.BackColor = Color.DarkRed;
-            buttonВибірШаблона.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonВибірШаблона.ForeColor = SystemColors.ButtonHighlight;
-            buttonВибірШаблона.Location = new Point(768, 59);
-            buttonВибірШаблона.Name = "buttonВибірШаблона";
-            buttonВибірШаблона.Size = new Size(110, 36);
-            buttonВибірШаблона.TabIndex = 22;
-            buttonВибірШаблона.Text = "Вибрати";
-            buttonВибірШаблона.UseVisualStyleBackColor = false;
-            buttonВибірШаблона.Click += buttonВибірШаблона_Click;
             // 
             // comboBoxШаблони
             // 
@@ -288,7 +248,6 @@
             Controls.Add(textBoxPayKod);
             Controls.Add(textBoxCount);
             Controls.Add(comboBoxШаблони);
-            Controls.Add(buttonВибірШаблона);
             Controls.Add(label6);
             Controls.Add(textBoxДата);
             Controls.Add(label7);
@@ -303,16 +262,13 @@
             Controls.Add(label3);
             Controls.Add(textBoxНомер_колонки_ПІП);
             Controls.Add(label2);
-            Controls.Add(label1);
             Name = "Form1";
             Text = "Формування_Квитанцій";
             ResumeLayout(false);
             PerformLayout();
         }
 
-
         #endregion
-        private Label label1;
         private TextBox textBoxНомер_колонки_ПІП;
         private Label label3;
         private TextBox textBoxСума_Податку;
@@ -327,7 +283,6 @@
         private Label label7;
         private TextBox textBoxДата;
         private Label label6;
-        private Button buttonВибірШаблона;
         private ComboBox comboBoxШаблони;
         private TextBox textBoxCount;
         private TextBox textBoxPayKod;

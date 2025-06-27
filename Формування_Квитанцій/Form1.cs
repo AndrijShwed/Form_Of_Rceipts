@@ -199,15 +199,6 @@ namespace Формування_Квитанцій
                 }
             }
         }
-
-        private void Довідка_MouseHover(object sender, EventArgs e)
-        {
-            MessageBox.Show("На вашому пк на диску `D` має бути створена папка 'Податки' де має бути файл(.docx) " +
-                "з назвою 'Шаблон' на якому розміщений шаблонний текст оголошення чи повідомлення з " +
-                "ключовими словами для заміни програмою (це слова `ПІП` і `Cума` ). Програма їх замінить" +
-                " на відповідні значення з вказаної вами таблиці .xlsx");
-        }
-
         private void buttonВибірШаблона_Click(object sender, EventArgs e)
         {
             string folderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DocTemplates");
